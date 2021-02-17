@@ -13,7 +13,7 @@ const Login = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Seja Bem-Vindo</Text>
+            <Text style={styles.titulo}>Login</Text>
             <TextInput style={styles.input} placeholder="Digite seu email" onChangeText={text=>setEmail(text)} value={email}/>
             <TextInput style={styles.input} placeholder="Digite sua senha"  onChangeText={text=>setSenha(text)} value={senha}
             secureTextEntry={true}/>

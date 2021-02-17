@@ -1,13 +1,17 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-        {/* <View style={styles.logo}>
-             <Image source={require('./assets/capacete-bell-qualifier-momentum.jpg')} style={styles.logoo} />
-         </View> */}
-            <Text>Home</Text>
+            <View style={styles.logo}>
+                <Image source={require('../../assets/home.png')} style={styles.image} />
+            </View>
+            <Text style={styles.titulo}>Seja Bem-Vindo</Text>
+            <Text style={styles.texto}>Trabalhamos com a venda de equipamentos e acessórios para motos das melhores marcas e produtos do mercado, reconhecidos mundialmente, garantindo ao motociclista conforto, qualidade, segurança e agilidade na entrega do pedido.</Text>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Produtos')}>
+                <Text>Conheça nossos produtos!</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -22,31 +26,27 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         textAlign: 'center'
     },
-    welcome: {
+    image: {
+        width: '100vw',
+        height: '30vh',
+        marginBottom: 20,
+    },
+    titulo: {
         fontSize: 35,
-        marginVertical: 20,
+        marginBottom: 20,
         fontWeight: 'bold',
         color: 'white',
     }, 
-    input:{
-        marginTop: 10,
-        padding: 10,
-        paddingHorizontal: 20,
-        width: '80%',
-        backgroundColor:'#fff',
-        fontSize: 15,
-        borderRadius: 50,
-    },
-    password: {
-        fontSize: 12,
-        marginVertical: 10,
+    texto: {
+        fontSize: 18,
+        marginBottom: 20,
         color: 'white',
     },
     btn:{
         marginTop: 10,
         padding: 10,
         paddingHorizontal: 20,
-        width: '50%',
+        width: '60vw',
         backgroundColor:'#fff',
         borderRadius: 50,
         justifyContent: 'center',
